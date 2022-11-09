@@ -10,7 +10,7 @@
   body {
     background-color: #ffffff;
     margin: 0;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
   }
   
   header {
@@ -18,20 +18,23 @@
     align-content: center;
     justify-content: space-between;
     margin: 0 auto;
-    padding: 1rem 5rem;
-    background: #f3f3f3;
+    font-size: 1.3rem;
+    padding: 1.5rem;
+    background-image: linear-gradient(rgb(247, 8, 8), rgb(201, 30, 30), rgb(182, 52, 52) );
     margin-bottom: 2rem;
     box-shadow: 0 1px 11px 3px rgb(0 0 0/21%);
   }
-  
-  header a {
-    color: #ad343e;
-    font-size: 1.5rem;
-    text-decoration: none;
-    font-weight: bold;
-    display: block;
+
+  .btn {
+    padding: 7px;
+    font-size: .9rem;
+    color: #ffffff;
+    background-image: linear-gradient(rgb(247, 8, 8), rgb(201, 30, 30), rgb(182, 52, 52));
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
   }
-  
+
   .search-area {
     display: flex;
     flex-direction: column;

@@ -1,39 +1,38 @@
-import Video from '../components/Video'
-import { data } from '../utils/data'
-import { customFetch } from '../utils/customFetch'
-import { useEffect, useState } from 'react'
+import { Video } from "../components/Video";
+import { data } from '../utilities/data'
+import { customFetch } from '../utilities/customFetch'
+import { useEffect, useState } from "react";
 
-const Videos = () => {
-  const [datos, setDatos] = useState([])
+export const Videos = () => {
 
-  const deleteItem = (id) => {
-    let nuevosDatos = datos.filter(item => item.id != id)
-    setDatos(nuevosDatos)
-  }
+    const [datos, setDatos] = useState([]) // representa la lista de videos, traida desde una supuesta BD
 
-  //componentDidMount
-  useEffect(() => {
-    customFetch(2000, data)
-      .then(response => setDatos(response))
-      .catch(err => console.log(err))
-  }, [])
-
-  return (
-    <>
-    {
-      datos.map(item => (
-        <Video
-        key={item.id}
-        title={item.title}
-        dateAdded={item.dateAdded}
-        channel={item.channel}
-        thumbnail={item.thumbnail}
-        description={item.description}
-        deleteVideo={() => deleteItem(item.id)} />
-      ))
+    const deleteItem = id => {
+        let nuevosDatos = datos.filter(item => item.id != id)
+        alert('esta seguro que quiere eliminar el video?')
+        setDatos(nuevosDatos)
     }
-    </>
-  )
-}
 
-export default Videos
+    useEffect(() => {
+        customFetch(data, 2000)
+        .then(response => setDatos(response))
+        .catch(err => console.log(err))
+    }, [])
+
+
+    return (
+        <>
+          {
+            datos.map(item => (
+                <Video
+                key={item.id} 
+                thumbnail={item.thumbnail}
+                title={item.title} 
+                dateAdded={item.dateAdded} 
+                description={item.description} 
+                deleteVideo={() => deleteItem(item.id)} />
+            ))
+          }
+        </>
+    )
+}

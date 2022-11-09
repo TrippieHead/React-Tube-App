@@ -24,12 +24,12 @@ export const data = [
       description: "Compra mi libro de recetas COCINA PARA TRIUNFAR en este link https://amzn.to/2UPUhNZ Mi sartén Tefal Aroma 24 cm https://amzn.to/2WSFjLf Batidora de ..."
     },
     {
-      id: 4,
+      id: 4,  
       title: "Jarabe De palo - Ying Yang",
       dateAdded: "2008-12-04T14:37:33Z",
       channel: "Warner Music Spain",
       thumbnail: "https://i.ytimg.com/vi/JSH321S6tGc/mqdefault.jpg",
-      description: ""
+      description: "Tremendo temardo epico, escuchenlo porfavor caretas."
     },
     {
       id: 5,
